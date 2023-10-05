@@ -12,6 +12,6 @@
 
 <script setup>
 const props = defineProps({
-  href: String
+  href: String,
 })
 </script>
