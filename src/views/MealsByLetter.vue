@@ -29,4 +29,5 @@ watch(route, () => {
 onMounted(() => {
   store.dispatch('searchMealsByLetter', route.params.letter)
 });
+
 </script>

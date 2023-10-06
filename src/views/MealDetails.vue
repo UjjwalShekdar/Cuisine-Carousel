@@ -43,7 +43,7 @@
       </ul>
     </div>
   </div>
-  <div class="mt-4">
+  <div class="mt-4 flex  justify-between">
     <YouTubeButton :href="meal.strYoutube">Go to Youtube</YouTubeButton>
     <a 
       :href="meal.strSource" 
@@ -63,7 +63,7 @@ import {onMounted, ref} from 'vue';
 import { useRoute } from 'vue-router';
 import axiosClient from '../axiosClient';
 import MealsByLetter from './MealsByLetter.vue';
-import YouTubeButton from '../components/YouTubeButton.vue'
+import YouTubeButton from '../components/YouTubeButton.vue';
 
 
 const route = useRoute();
