@@ -45,14 +45,7 @@
   </div>
   <div class="mt-4 flex  justify-between">
     <YouTubeButton :href="meal.strYoutube">Go to Youtube</YouTubeButton>
-    <a 
-      :href="meal.strSource" 
-      target="_blank" 
-      class="ml-3 px-3 py-2 rounded border-2 
-              border-blue-600 bg-blue-500 bg-blue-600 
-              text-white transition-colors">
-     View Original Source
-    </a>
+    <ViewOriginalSource :href="meal.strSource">View Source</ViewOriginalSource>
   </div>
 </div>
 </template>
@@ -64,6 +57,7 @@ import { useRoute } from 'vue-router';
 import axiosClient from '../axiosClient';
 import MealsByLetter from './MealsByLetter.vue';
 import YouTubeButton from '../components/YouTubeButton.vue';
+import ViewOriginalSource from '../components/ViewOriginalSource.vue';
 
 
 const route = useRoute();

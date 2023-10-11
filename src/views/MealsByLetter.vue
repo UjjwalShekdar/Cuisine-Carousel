@@ -4,9 +4,7 @@
       {{ letter }}
       </router-link>
    </div> 
-   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-8">
-     <MealItem v-for="meal of meals" :key="meal.idMeal" :meal="meal"/>
-   </div>
+   <Meals :meals="meals" />
 </template>
 
 <script setup>
@@ -14,7 +12,9 @@ import store from '../store';
 import { computed } from '@vue/reactivity';
 import {onMounted, watch} from 'vue';
 import { useRoute } from 'vue-router';
-import MealItem from '../components/MealItem.vue';
+import Meals from '../components/Meals.vue';
+import YouTubeButton from '../components/YouTubeButton.vue';
+import ViewOriginalSource from '../components/ViewOriginalSource.vue';
 
 const route = useRoute();
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split("");

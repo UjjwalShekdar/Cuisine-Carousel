@@ -21,11 +21,9 @@
             View
           </router-link> -->
 
-        <a :href="meal.strSource" target="_blank" class="ml-3 px-3 py-2 rounded border-2 
-              border-blue-600 bg-blue-500 bg-blue-600 
-              text-white transition-colors">
-          View Original Source
-        </a>
+        <ViewOriginalSource :href="meal.strSource">
+          View Source
+        </ViewOriginalSource>
       </div>
 
     </div>
@@ -34,7 +32,8 @@
 
 <script setup>
 import { defineProps } from 'vue';
-import YouTubeButton from '../components/YouTubeButton.vue';
+import YouTubeButton from './YouTubeButton.vue';
+import ViewOriginalSource from './ViewOriginalSource.vue';
 
 const { meal } = defineProps({
   meal: {
